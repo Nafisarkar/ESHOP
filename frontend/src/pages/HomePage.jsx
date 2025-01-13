@@ -21,7 +21,7 @@ const HomePage = () => {
   return (
     <>
       <Container maxW={'container.lg'}  >
-        <VStack spacing={'1'} mb={'8'}>
+        <VStack spacing={'1'} pb={'8'}>
 
           {products.length > 0 && (
             <Center>
