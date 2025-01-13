@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const BASE_URL ="https://eshop-gilt-chi.vercel.app/api";
+const BASE_URL ="https://eshop-gilt-chi.vercel.app";
 
 export const useProductStore = create((set) => ({
   
