@@ -1,7 +1,6 @@
 # ESHOP - Online Shopping Website
 
 ![Banner Image Placeholder](https://i.ibb.co.com/nwnSpHT/Screenshot-2025-01-13-161334.png)  
-*(Add your banner image in the `assets` folder and update the path)*
 
 ## Description
 
