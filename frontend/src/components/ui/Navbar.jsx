@@ -56,11 +56,14 @@ const Navbar = () => {
           </Link>
           
             <Button
+              display={{ base: 'flex', sm: 'none', md: 'flex' }}
               size={"sm"}
               variant={"surface"}
               color={'blue.500'}
-              onClick={() => window.open("https://github.com/sakurashoes")}
+              onClick={() => window.open("https://github.com/Nafisarkar/ESHOP")}
+              
             >
+              
                 <FaGithub />
             </Button>
           
