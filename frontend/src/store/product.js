@@ -9,8 +9,10 @@ export const useProductStore = create((set) => ({
     }
     const res = await fetch("https://eshop-gilt-chi.vercel.app/api/products", {
       method: "POST",
+
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify(newProduct),
     });
@@ -19,7 +21,15 @@ export const useProductStore = create((set) => ({
     return { success: true, message: "Product created successfully" };
   },
   fetchProducts: async () => {
-    const res = await fetch("https://eshop-gilt-chi.vercel.app/api/products");
+    const res = await fetch("https://eshop-gilt-chi.vercel.app/api/products",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
+    );
     const data = await res.json();
     set({ products: data.data });
   },
@@ -41,6 +51,7 @@ export const useProductStore = create((set) => ({
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify(updatedProduct),
     });
