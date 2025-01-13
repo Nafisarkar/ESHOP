@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api':{
-        target:'https://eshopbackend-git-main-sakunos-projects.vercel.app/',
+        target:'http://localhost:5000',
       }
     }
   }

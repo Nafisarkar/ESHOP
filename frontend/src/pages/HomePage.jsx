@@ -45,8 +45,6 @@ const HomePage = () => {
           )}
         </VStack>
 
-
-       
       <Center
         position={'fixed'}
         bottom={'0'}
