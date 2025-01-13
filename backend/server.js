@@ -16,10 +16,6 @@ app.use(express.json()); // to accept json data in the body of the request
 
 app.use("/api/products",productRoutes)
 
-app.get("/", (req, res) => {
-  res.send("Server is running");
-});
-
 
 app.listen(PORT, () => {
   connectDB();
