@@ -1,13 +1,17 @@
 import { create } from "zustand";
 
+const BASE_URL ="https://eshop-gilt-chi.vercel.app/api";
+
 export const useProductStore = create((set) => ({
+  
+
   products: [],
   setProducts: (products) => set({ products }),
   createProduct: async (newProduct) => {
     if (!newProduct.name || !newProduct.price || !newProduct.image) {
       return { success: false, message: "All fields are required" };
     }
-    const res = await fetch("/api/products", {
+    const res = await fetch(`${BASE_URL}/api/products`, {
       method: "POST",
 
       headers: {
@@ -20,7 +24,7 @@ export const useProductStore = create((set) => ({
     return { success: true, message: "Product created successfully" };
   },
   fetchProducts: async () => {
-    const res = await fetch("/api/products",
+    const res = await fetch(`${BASE_URL}/api/products`,
       {
         method: "GET",
         headers: {
@@ -32,7 +36,7 @@ export const useProductStore = create((set) => ({
     set({ products: data.data });
   },
   deleteProduct: async (pid) => {
-    const res = await fetch(`/api/products/${pid}`, {
+    const res = await fetch(`${BASE_URL}/api/products/${pid}`, {
       method: "DELETE",
     });
     const data = await res.json();
@@ -45,7 +49,7 @@ export const useProductStore = create((set) => ({
     return { success: true, message: "Product deleted successfully" };
   },
   updateProduct: async (pid, updatedProduct) => {
-    const res = await fetch(`/api/products/${pid}`, {
+    const res = await fetch(`${BASE_URL}/api/products/${pid}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

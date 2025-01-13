@@ -9,9 +9,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         headers: { 'Access-Control-Allow-Origin': '*' },
-        target: 'https://eshop-gilt-chi.vercel.app', // Ensure this matches your backend URL
-        changeOrigin: true, // Ensures the host header is updated to the target URL
-        rewrite: (path) => path.replace(/^\/api/, '/api'), // Retains the '/api' prefix in requests
+        target: 'https://eshop-gilt-chi.vercel.app', 
       },
     },
   },
