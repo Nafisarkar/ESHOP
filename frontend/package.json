@@ -12,6 +12,11 @@
   "dependencies": {
     "@chakra-ui/react": "^3.2.5",
     "@emotion/react": "^11.14.0",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "eshop": "file:..",
     "next-themes": "^0.4.4",
     "react": "^18.3.1",

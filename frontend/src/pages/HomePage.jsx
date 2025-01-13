@@ -20,16 +20,16 @@ const HomePage = () => {
 
   return (
     <>
-      <Container maxW={'container.lg'} p={'8'} >
-        <VStack spacing={'8'}>
+      <Container maxW={'container.lg'}  >
+        <VStack spacing={'1'}>
 
           {products.length > 0 && (
             <Center>
-              <Text fontSize={'2xl'} m={'1'} >Current Products</Text>
+              <Text fontSize={'2xl'} m={'1'} ></Text>
             </Center>
           )}
 
-          <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} w={'full'} gap={'4'}>
+          <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} w={'full'} gap={'4'} m={'2'} >
 
             {products.map((product) => (
               <ProductCard key={product._id} product={product} />
@@ -43,30 +43,29 @@ const HomePage = () => {
               </Text>
             </Center>
           )}
+
+
         </VStack>
 
-      <Center
+        <Center
         position={'fixed'}
         bottom={'0'}
         left={'0'}
         right={'0'}
-        py={'4'}
+        
       >
-        <Text fontSize={'xl'}>
+        <Text fontSize={'smaller'} opacity={0.4} _hover={{ opacity: 1, cursor: 'pointer' }} onClick={
+          () => {
+            window.open('https://github.com/Nafisarkar', '_blank');
+          }
+        }>
           Made By{" "}
-          <Link
-            variant="underline"
-            href="https://github.com/Nafisarkar"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Text as={'span'} style={{ fontWeight: 'bold' }} color={'blue.500'}>
+            <Text as={'span'} style={{ fontWeight: 'bold' }} color={'blue.500'} >
               Shaon An Nafi
             </Text>
-          </Link>{" "}
+          
         </Text>
       </Center>
-        
       </Container>
     </>
   )

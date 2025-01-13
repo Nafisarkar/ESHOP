@@ -9,7 +9,11 @@ import { Toaster, toaster } from "@/components/ui/toaster"
 function App() {
 
   return (
-    <Box minH={"100vh"} bg={useColorModeValue("dark.100","gray.900")}>
+    <Box
+      minH={"100vh"}
+      bg={useColorModeValue("dark.100","gray.900")}
+      fontFamily="Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"
+    >
       <Toaster />
       <Navbar />
       <Routes >

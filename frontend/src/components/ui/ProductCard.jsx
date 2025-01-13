@@ -51,6 +51,11 @@ const ProductCard = ({ product }) => {
       overflow={'hidden'}
       transition={'all 0.3s'}
       _hover={{ transform: 'translateY(-5px)', boxShadow: 'xl' }}
+      animation={{
+        base: "slideInLeft 0.5s ease-in-out forwards",
+        sm: "slideInLeft 0.5s ease-in-out forwards"
+        
+      }}
     >
       <Image src={product.image} alt={product.name} h={'250px'} w={"full"} objectFit={'cover'}></Image>
 

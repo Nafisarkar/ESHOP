@@ -3,12 +3,15 @@ import { Flex, Text, Button } from '@chakra-ui/react'
 import { IoIosAddCircleOutline } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { ColorModeButton } from "@/components/ui/color-mode"
-
+import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
 
   return (
-    <Container maxW={'container.lg'} p={'12'}>
+    <Container maxW={'container.lg'} p={'10'}  animation={{
+      base: "slideInLeft 0.5s ease-in-out forwards",
+      sm: "slideInLeft 0.5s ease-in-out forwards"
+    }}>
 
       <Flex
         h={'16px'}
@@ -18,22 +21,21 @@ const Navbar = () => {
           base: 'column',
           sm: 'row',
         }}
+       
       >
         <Text
-					fontSize={{ base: "xl", sm: "2xl" }}
+					fontSize={{ base: "xl", sm: "3xl" }}
           fontWeight={"bold"}
 					textTransform={"uppercase"}
 					textAlign={"center"}
           color={'blue.500'}
 				>
-					<Link to={"/"} >Product Store</Link>
+					<Link to={"/"}><Text as="i">🌸SAKURA SHOES</Text></Link>
 				</Text>
 
         <HStack
         gap={2}
         alignItems={"center"}
-        
-
         >
 					<Link to={"/create"}>
             <Button
@@ -52,6 +54,17 @@ const Navbar = () => {
             color={'blue.500'}
           />
           </Link>
+          
+            <Button
+              size={"sm"}
+              variant={"surface"}
+              color={'blue.500'}
+              onClick={() => window.open("https://github.com/sakurashoes")}
+            >
+                <FaGithub />
+            </Button>
+          
+          
         </HStack>
         
       </Flex>
@@ -60,3 +73,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
